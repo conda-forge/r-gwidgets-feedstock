@@ -12,21 +12,18 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/gWidgets_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/gWidgets/gWidgets_{{ version }}.tar.gz
-
   sha256: 82a10a13115c76dd19f3664dd50508db537c0406dfea47672a65ed59ed5a8b8e
 
 build:
-  number: 0
-  skip: true  # [win32]
-
+  noarch: generic
+  number: 1000
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
-  build:
+  host:
     - r-base
-
   run:
     - r-base
 
@@ -42,8 +39,8 @@ about:
     one of the 'gWidgetsXXX packages', such as gWidgetstcltk, needs to be installed.
     Some icons are on loan from the scigraphica project http
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}\/lib\/R\/share\/licenses\/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+
 extra:
    recipe-maintainers:
     - MathiasHaudgaard
