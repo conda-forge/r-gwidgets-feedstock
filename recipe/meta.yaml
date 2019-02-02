@@ -1,4 +1,4 @@
-{% set version = '0.0-54' %}
+{% set version = "0.0-54.1" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,11 +12,11 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/gWidgets_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/gWidgets/gWidgets_{{ version }}.tar.gz
-  sha256: 82a10a13115c76dd19f3664dd50508db537c0406dfea47672a65ed59ed5a8b8e
+  sha256: c2b28b146de38c7ecb86046f5876080a439c34632cc9c1dde0ff2d4ae2959cef
 
 build:
   noarch: generic
-  number: 1000
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
