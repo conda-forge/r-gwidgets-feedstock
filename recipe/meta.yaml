@@ -1,4 +1,4 @@
-{% set version = "0.0-54.1" %}
+{% set version = "0.0-54.2" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,11 +12,11 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/gWidgets_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/gWidgets/gWidgets_{{ version }}.tar.gz
-  sha256: c2b28b146de38c7ecb86046f5876080a439c34632cc9c1dde0ff2d4ae2959cef
+  sha256: bb5bd9a0524c858271f439c6a258c0b73887a2dddd5fa01f8ef1bc4c8c1fd508
 
 build:
   noarch: generic
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -35,14 +35,12 @@ test:
 about:
   home: https://cran.r-project.org/web/packages/gWidgets/index.html
   license: GPL (>= 2)
-  summary: gWidgets provides a toolkit-independent API for building interactive GUIs. At least
-    one of the 'gWidgetsXXX packages', such as gWidgetstcltk, needs to be installed.
-    Some icons are on loan from the scigraphica project http
+  summary: gWidgets provides a toolkit-independent API for building interactive GUIs. At least one of the 'gWidgetsXXX packages', such as gWidgetstcltk, needs to be installed. Some icons are on loan from the scigraphica project http
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
-   recipe-maintainers:
+  recipe-maintainers:
     - conda-forge/r
     - MathiasHaudgaard
     - FrodePedersen
