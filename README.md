@@ -1,11 +1,11 @@
-About r-gwidgets
-================
+About r-gwidgets-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-gwidgets-feedstock/blob/main/LICENSE.txt)
 
 Home: https://cran.r-project.org/web/packages/gWidgets/index.html
 
 Package license: GPL (>= 2)
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-gwidgets-feedstock/blob/main/LICENSE.txt)
 
 Summary: gWidgets provides a toolkit-independent API for building interactive GUIs. At least one of the 'gWidgetsXXX packages', such as gWidgetstcltk, needs to be installed. Some icons are on loan from the scigraphica project http
 
